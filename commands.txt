@@ -1,0 +1,56 @@
+AFK Class Functions and Usage
+=============================
+
+1. sleep(ms)
+   - Description: Sleep for a number of milliseconds using ctypes.
+   - Example: afk.sleep(10)
+
+2. click(x=None, y=None)
+   - Description: Left mouse click at the given coordinates. If x and y are not provided, it clicks at the current position.
+   - Example: afk.click() or afk.click(100, 200)
+
+3. mouse_wheel(delta=120)
+   - Description: Scrolls the mouse wheel. Positive for up, negative for down.
+   - Example: afk.mouse_wheel(240)
+
+4. type(*chars)
+   - Description: Types keys one by one. Accepts multiple single characters like afk.type("w", "a", "s", "d").
+     If a full word is passed like afk.type("hello"), it prints it instead of typing it.
+   - Example: afk.type("w", "a") or afk.type("h", "e", "l", "l", "o")
+
+5. move(x, y)
+   - Description: Moves the mouse to the absolute screen coordinates.
+   - Example: afk.move(300, 400)
+
+6. double_click(x, y)
+   - Description: Double-clicks at the specified coordinates.
+   - Example: afk.double_click(300, 400)
+
+7. get_pid(proc_name)
+   - Description: Gets the PID of a process by name and stores it in afk.pid.
+   - Example: afk.get_pid("notepad.exe")
+
+8. kill()
+   - Description: Kills the process stored in afk.pid.
+   - Example: afk.kill()
+
+9. is_running()
+   - Description: Checks if the process stored in afk.pid is still running.
+   - Example: afk.is_running()
+
+10. bring_to_front()
+    - Description: Brings the window of the process to the foreground.
+    - Example: afk.bring_to_front()
+
+11. get_screen_resolution()
+    - Description: Returns the width and height of the screen.
+    - Example: w, h = afk.get_screen_resolution()
+
+12. show_cursor(show=True)
+    - Description: Shows or hides the mouse cursor.
+    - Example: afk.show_cursor(True) or afk.show_cursor(False)
+
+13. set_window_state(hwnd, state)
+    - Description: Changes the state of a window. 
+      State values: 6 = minimize, 9 = restore, 3 = maximize
+    - Example: afk.set_window_state(hwnd, 6)
